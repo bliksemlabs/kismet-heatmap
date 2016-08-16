@@ -69,8 +69,8 @@ def parse_xml(filename):
 
 	for z in tree.findall('.//gps-point'):
 		# A lon/lat filter might be applied here
-		if float(z.get('lon')) < 3.942:
-			continue
+		# if float(z.get('lon')) < 3.942:
+		#	continue
 
 		if z.get('bssid') == 'GP:SD:TR:AC:KL:OG':
 			walked_lon.append(float(z.get('lon')))
